@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LookLoud.AI",
+  "version": "1.0",
+  "description": "Analyse page content.",
+  "permissions": ["activeTab", "tabs", "tabCapture", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
